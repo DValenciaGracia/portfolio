@@ -1,0 +1,253 @@
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-seccion: #EAF2FD;
+    --color-de-link: #000000;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    
+}
+
+ol, ul, li {
+    list-style: none;
+}
+p, h1, h2, h4, ul {
+    color: #464646;
+    ;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--color-de-fondo);
+}
+.cabecera__conjunto {
+    display: flex;   /*  Texto de cabecera a derecha */
+    flex-direction: row;
+    align-items: first baseline;
+    padding: 10px;   
+}
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+    width: 24px;
+    height: 24px;
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    font-family: Raleway;
+    padding-left: 10px;
+}
+
+.navegacion__lista {
+    display: none; /* Cambiar a flex en media query */
+
+}
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    background-color: var(--color-de-fondo);
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    padding: 10% 0; /* Reduce redundancia en padding */
+    padding: 1rem;
+}
+.presentacion__titulo {
+    font-size: 52px;
+}
+.redes {
+    text-align: left;
+    display: flex;
+    padding-right: 15px;
+    padding: 1%;
+}
+.redes__img {
+    padding: 1%;
+}
+.presentacion__foto {
+    padding-left: 15px;
+}
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+    background-color: var(--color-seccion);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem; /* Consolidate padding */
+}
+
+.sobre-mi__texto {
+    padding: 0px;
+}
+.sobre-mi__firma {
+    width: 140px;
+    height: 52px;
+}
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades {
+    text-align: center;
+}
+.habilidades__titulo {
+    padding: 0px;
+    text-align: center;
+}
+.habilidades__lista {
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+    padding-top: 0%;
+    gap: 15px;
+}
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 176px;
+    height: 174px;
+    padding: 16px;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--color-de-fondo-menu); /* Consider uniformity in element spacing */
+}
+.habilidades__icono {
+    width: 24px;
+    height: max-content 40px;
+    align-items: end;
+    padding-top: 70%;
+    }
+
+.habilidades__nombre {
+    font-size: 16px;
+    padding-bottom:10%;
+}
+.formacion__lista {
+    display: flex;
+    flex-direction: row; /* Unified list styles */
+}
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones {
+    text-align: center;
+    background-color: var(--color-de-fondo);
+}
+.aficiones__lista {
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+    padding-top: 0%;
+    gap: 15px;
+}
+.aficiones__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 176px;
+    height: 174px;
+    padding: 16px;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--color-de-fondo-menu); /* Consider uniformity in element spacing */
+}
+/*------------------------------ Sección de Formación académica --------------------------------*/
+.formacion {
+    text-align: center;
+    background-color: var(--color-seccion);
+    padding: 5%;
+}
+
+.formacion__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 368px;
+    height: 286px;
+    padding: 16px;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--color-de-fondo-menu);
+}
+
+/*------------------------------ Sección de Experiencia Profesional -Sección proyectos --------------------------------*/
+.proyectos {
+    text-align: center;
+    padding-top: 30px;
+    background-color: var(--color-de-fondo);
+}
+.proyectos__contenedor {
+    text-align: left;
+    padding: 1%;
+}
+/*------------------------------ Sección de Contacto ---------------------------------*/
+.contacto__bloque {
+    display: flex;
+    background-color: var(--color-seccion);
+    padding: 5%;
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px; /* Consolidated width */
+    padding-left: 5%;
+}
+
+/* Estilos de formulario */
+.contacto__formulario label.text,
+.contacto__formulario input[type=text].input {
+    font-size: 0.75rem; /* Unified font size */
+}
+
+.contacto__formulario input[type=text].input {
+    padding: 11px 10px;
+    border-radius: 5px;
+}
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 120px; /* Moved from logo */
+        padding-right: 100px; /* Moved from navigation */
+        margin-top: 0; /* Unified margin properties */
+        .navegacion__lista {
+            display: flex; /* Show navigation on larger screens */
+            gap: 1rem; 
+        }
+        .cabecera__titulo, .navegacion__elemento a {
+            font-size: larger; /* Adjusted for consistency */
+        }
+        .cabecera__logo { max-width: 100px; }
+        .cabecera__titulo { font-size: 1.5rem; }
+        .navegacion__elemento a { font-size: 1rem; }
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+   .cabecera__titulo { font-size: 1.8rem; }
+   .navegacion__elemento a { font-size: 1.1rem; }
+}
